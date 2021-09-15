@@ -1,0 +1,13 @@
+:root {
+	/* Headers Font: 500, 600, 700 */
+	--IBM: 'IBM Plex Sans Arabic', sans-serif;
+
+	/* Body Font: 300, 400, 500 */
+	--Cormorant: 'Cormorant Garamond', serif;
+
+	/* Colors  */
+	--body-bg: #141c2f;
+	--ctr-bg: #1f2a48;
+	--search-btn-bg: #0177fb;
+	--off-font-color: #9097a6;
+}
