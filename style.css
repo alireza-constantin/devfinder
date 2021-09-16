@@ -46,7 +46,7 @@ body {
 	width: 45vw;
 	color: #fff;
 	margin: auto;
-	margin-top: 10%;
+	margin-top: 6%;
 }
 
 /* ----------------------------Title & Search bar--------------------- */
@@ -173,7 +173,7 @@ body {
 	color: #aaaaaaa8;
 	font-weight: 600;
 	margin-top: 0.8rem;
-	max-height: 50px;
+	max-height: 60px;
 	overflow: auto;
 }
 
@@ -230,6 +230,10 @@ body {
 }
 
 @media (max-width: 1100px) {
+	/* #ctr {
+		width: 60vw;
+	} */
+
 	.card .profile {
 		grid-template-areas:
 			'pic info info info'
@@ -256,5 +260,60 @@ body {
 
 	.card .info .workplace {
 		margin-right: 10px;
+	}
+}
+
+@media (max-width: 1000px) {
+	#ctr {
+		width: 60vw;
+	}
+}
+
+@media (max-width: 800px) {
+	#ctr {
+		width: 75vw;
+	}
+}
+
+@media (max-width: 650px) {
+	#ctr {
+		width: 85vw;
+	}
+
+	.stats .ctr {
+		gap: 0;
+		justify-content: space-around;
+	}
+}
+
+@media (max-width: 550px) {
+	#ctr {
+		width: 92vw;
+	}
+
+	.card .profile {
+		gap: 1rem;
+	}
+
+	.bio-info .name {
+		font-size: 1.2rem;
+	}
+	.card .profile .img img {
+		width: 70px;
+		height: 70px;
+	}
+
+	.bio-info .name-id p {
+		font-size: 0.8rem;
+	}
+
+	.bio-info .date p {
+		font-size: 0.8rem;
+	}
+	.info {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 1rem;
 	}
 }
