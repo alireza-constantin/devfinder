@@ -14,31 +14,41 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=IBM+Plex+Sans+Arabic:wght@500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700;900&family=IBM+Plex+Sans+Arabic:wght@500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<link rel="stylesheet" href="style.css" />
 		<script src="app.js" defer></script>
 		<title>Devfinder</title>
 	</head>
 	<body>
-		<div class="ctr">
+		<div id="ctr">
 			<div class="title">
 				<h1>devfinder</h1>
 				<a class="light" id="light-btn">LIGHT <i class="fas fa-sun"></i></a>
 			</div>
 			<div class="search-bar">
 				<div class="search-icon">
-					<i class="fas fa-search"></i>
+					<img src="icon-search.svg" alt="" />
 				</div>
-				<h4>Search Github username...</h4>
+				<input type="text" placeholder="Search Github username..." />
 				<a id="search-btn" class="search-btn">Search</a>
 			</div>
 			<div class="card">
 				<div class="ctr">
 					<div class="profile">
 						<div class="img">
-							<img src="github-octocat.png" alt="" />
+							<img
+								src="https://avatars.githubusercontent.com/u/583231?v=4"
+								alt=""
+							/>
 						</div>
 						<div class="bio-info">
 							<div class="name-id">
@@ -49,11 +59,7 @@
 								<p>Joined 25 Jan 2011</p>
 							</div>
 						</div>
-						<div class="bio">
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-							repellendus consectetur sed quasi ad! Ipsum ea reiciendis ipsam
-							quibusdam voluptas.
-						</div>
+						<div class="bio">This profile has no bio</div>
 					</div>
 					<div class="stats">
 						<div class="ctr">
@@ -67,7 +73,7 @@
 							</div>
 							<div class="following">
 								<p>Following</p>
-								<p>9</p>
+								<p class="nums">9</p>
 							</div>
 						</div>
 					</div>
