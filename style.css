@@ -11,6 +11,7 @@
 	--ctr-bg: #1f2a48;
 	--search-btn-bg: #0177fb;
 	--off-font-color: #9097a6;
+	--light: #f6f8ff;
 }
 
 *,
@@ -40,6 +41,11 @@ body {
 	background-color: var(--body-bg);
 	font-family: var(--space-mono);
 	user-select: none;
+	overflow: hidden;
+}
+
+body.light {
+	background: var(--light);
 }
 
 #ctr {
@@ -47,6 +53,10 @@ body {
 	color: #fff;
 	margin: auto;
 	margin-top: 6%;
+}
+
+.light #ctr {
+	color: #4b6a9b;
 }
 
 /* ----------------------------Title & Search bar--------------------- */
@@ -61,6 +71,13 @@ body {
 	font-size: 1.4rem;
 	font-family: var(--IBM);
 	font-weight: 500;
+	transition: 1s;
+	cursor: pointer;
+}
+
+.title h1:hover {
+	letter-spacing: 5px;
+	color: var(--search-btn-bg);
 }
 
 .title .light {
@@ -69,6 +86,12 @@ body {
 	font-weight: 500;
 	cursor: pointer;
 }
+
+.light .title {
+	font-weight: 900;
+	font-family: var(--IBM);
+}
+
 /* Search Bar */
 #ctr .search-bar {
 	display: flex;
@@ -78,6 +101,12 @@ body {
 	padding: 0.4rem 0.4rem;
 	border-radius: 10px;
 	gap: 1rem;
+}
+
+.light #ctr .search-bar {
+	background-color: #f6f8ff;
+	box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%),
+		0px -1px 30px -10px rgb(70 96 187 / 10%);
 }
 
 .search-bar input {
@@ -91,6 +120,15 @@ body {
 	font-weight: 500;
 }
 
+.light .search-bar input {
+	color: #4b6a9b;
+	font-weight: 600;
+}
+
+.light .search-bar input::placeholder {
+	color: #4b6a9bb6;
+}
+
 .search-bar input::placeholder {
 	color: #f8f6f6d7;
 }
@@ -101,6 +139,16 @@ body {
 	height: 20px;
 	width: 20px;
 	vertical-align: middle;
+	cursor: pointer;
+	transition: all 1.2s;
+}
+
+.light .search-bar .search-btn {
+	color: #fff;
+}
+
+.search-bar .search-icon:hover {
+	transform: rotate(360deg);
 }
 
 .search-bar .search-btn {
@@ -112,15 +160,54 @@ body {
 	font-size: 0.8rem;
 }
 
+.search-bar .search-btn:hover {
+	opacity: 0.7;
+}
+
+/* error */
+.error {
+	display: none;
+}
+.error.show {
+	color: #f33737;
+	margin-top: 10px;
+	margin-left: 5px;
+	display: block;
+	animation: show 0.4s forwards;
+}
+
+.search-bar.error {
+	border-bottom: 3px solid #f33737;
+}
+
 /* --------------------------------Card------------------ */
 .card {
+	display: block;
 	background-color: var(--ctr-bg);
 	margin-top: 1.5rem;
 	border-radius: 10px;
 }
 
+.light .card {
+	background: var(--light);
+	box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%),
+		0px -1px 30px -10px rgb(70 96 187 / 10%);
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+		transform: translateY(400px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .card .ctr {
 	padding: 2rem;
+	animation: show 1s forwards;
 }
 
 .card .profile {
@@ -167,6 +254,10 @@ body {
 	margin-top: 10px;
 }
 
+.light .bio-info .date p {
+	color: #4b6a9b;
+}
+
 .card .bio {
 	grid-area: bio;
 	font-size: 0.8rem;
@@ -175,6 +266,10 @@ body {
 	margin-top: 0.8rem;
 	max-height: 60px;
 	overflow: auto;
+}
+
+.light .card .bio {
+	color: #4b6a9b;
 }
 
 .card .bio::-webkit-scrollbar {
@@ -190,6 +285,10 @@ body {
 	border-radius: 10px;
 }
 
+.light .stats {
+	background: #ecf0ff;
+}
+
 .stats .ctr {
 	display: flex;
 	padding: 1rem 1.5rem;
@@ -203,6 +302,10 @@ body {
 	font-weight: 600;
 }
 
+.light .stats .ctr p {
+	color: #4b6a9b;
+}
+
 .stats .ctr .nums {
 	font-size: 1.1rem;
 	color: #fff;
@@ -211,14 +314,14 @@ body {
 /* Info */
 .info {
 	margin-top: 1rem;
-	width: 65%;
-	margin-right: 45px;
-	margin-left: auto;
+	margin-left: 27%;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	align-items: center;
-	text-align: left;
+}
+
+.info div {
+	flex-basis: 50%;
 }
 
 .info span,
@@ -227,6 +330,11 @@ body {
 	color: #d6d6d6ab;
 	font-weight: 600;
 	text-decoration: none;
+}
+
+.light .info span,
+.light .info a {
+	color: #4b6a9b;
 }
 
 @media (max-width: 1100px) {

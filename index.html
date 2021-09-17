@@ -38,69 +38,18 @@
 				<div class="search-icon">
 					<img src="icon-search.svg" alt="" />
 				</div>
-				<input type="text" placeholder="Search Github username..." />
+				<input
+					id="search-input"
+					type="text"
+					placeholder="Search Github username..."
+				/>
 				<a id="search-btn" class="search-btn">Search</a>
 			</div>
-			<div class="card">
-				<div class="ctr">
-					<div class="profile">
-						<div class="img">
-							<img
-								src="https://avatars.githubusercontent.com/u/583231?v=4"
-								alt=""
-							/>
-						</div>
-						<div class="bio-info">
-							<div class="name-id">
-								<h1 class="name">The Octocat</h1>
-								<p>@<span class="id">octocat</span></p>
-							</div>
-							<div class="date">
-								<p>Joined 25 Jan 2011</p>
-							</div>
-						</div>
-						<div class="bio">
-							This profile has no bio Lorem, ipsum dolor sit amet consectetur
-							adipisicing elit. Sed pariatur suscipit rem deleniti mollitia
-							officia dolores corrupti porro aliquam blanditiis.
-						</div>
-					</div>
-					<div class="stats">
-						<div class="ctr">
-							<div class="repo">
-								<p>Repos</p>
-								<p class="nums">8</p>
-							</div>
-							<div class="followers">
-								<p>Followers</p>
-								<p class="nums">3938</p>
-							</div>
-							<div class="following">
-								<p>Following</p>
-								<p class="nums">9</p>
-							</div>
-						</div>
-					</div>
-					<div class="info">
-						<div class="location">
-							<i class="fas fa-link"></i>
-							<span> San Francisco</span>
-						</div>
-						<div class="twitter">
-							<i class="fab fa-twitter"></i>
-							<span> octocat</span>
-						</div>
-						<div class="blog">
-							<i class="fas fa-link"></i>
-							<a href="https://githhub.blog"> https://githhub.blog</a>
-						</div>
-						<div class="workplace">
-							<i class="fas fa-building"></i>
-							<span> github</span>
-						</div>
-					</div>
-				</div>
+			<div id="error-msg" class="error">
+				<p>User Not Found</p>
 			</div>
+			<!-- Card -->
+			<div id="card" class="card"></div>
 		</div>
 	</body>
 </html>
