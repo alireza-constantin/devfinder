@@ -126,4 +126,11 @@ const lightBtn = document.getElementById('light-btn');
 
 lightBtn.addEventListener('click', () => {
 	document.body.classList.toggle('light');
+	if(lightBtn.innerText.trim() = 'LIGHT') {
+		lightBtn.innerText = 'DARK'
+	} else { 
+		lightBtn.innerText = 'LIGHT'
+	}
+		
+	
 });
