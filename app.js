@@ -123,14 +123,13 @@ const showCard = (data) => {
 
 // Changing Theme
 const lightBtn = document.getElementById('light-btn');
+const darkmodeText = document.querySelector('.darkmode-text');
 
 lightBtn.addEventListener('click', () => {
 	document.body.classList.toggle('light');
-	if(lightBtn.innerText.trim() = 'LIGHT') {
-		lightBtn.innerText = 'DARK'
-	} else { 
-		lightBtn.innerText = 'LIGHT'
+	if (darkmodeText.innerText === 'LIGHT') {
+		darkmodeText.innerText = 'DARK';
+	} else {
+		darkmodeText.innerText = 'LIGHT';
 	}
-		
-	
 });
